@@ -1,0 +1,24 @@
+body {
+  margin: 0;
+  position: relative;
+  min-height: 100vh;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/5/53/BlankMap-World-v5-BeforeKosovo.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  opacity: 0.2; /* 👈 вот прозрачность */
+
+  z-index: -1;
+}
+
+* {
+  box-sizing: border-box;
+}
