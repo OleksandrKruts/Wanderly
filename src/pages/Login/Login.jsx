@@ -69,7 +69,7 @@ const Login = () => {
             )}
           </div>
 
-          <button type="submit" className="login-btn login-full-width">
+          <button type="submit" className="btn-primary login-full-width">
             Sign In
           </button>
         </form>
