@@ -16,18 +16,5 @@
 
 .not-found p {
   color: #666;
-  font-size: 16px;
-}
-
-.not-found button {
-  padding: 10px 16px;
-  border: none;
-  border-radius: 8px;
-  background: #4f46e5;
-  color: white;
-  cursor: pointer;
-}
-
-.not-found button:hover {
-  background: #4338ca;
+  font-size: 24px;
 }

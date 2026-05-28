@@ -14,11 +14,24 @@ body::before {
   background-position: center;
   background-repeat: no-repeat;
 
-  opacity: 0.2; /* 👈 вот прозрачность */
+  opacity: 0.15;
 
   z-index: -1;
 }
 
 * {
   box-sizing: border-box;
+}
+
+.btn-primary {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  background: #4f46e5;
+  color: white;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background: #4338ca;
 }

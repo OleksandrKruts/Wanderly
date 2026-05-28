@@ -6,15 +6,26 @@ const Home = () => {
 
   return (
     <div className="home">
-      <div className="overlay" />
-
-      <div className="content">
-        <h1>Travel Explorer</h1>
-        <p>Discover travelers from around the world</p>
-
-        <button onClick={() => navigate("/travelers")}>
-          Explore Travelers
-        </button>
+      <div className="home-content">
+        <span className="home-badge">Explore the World</span>
+        <h1 className="home-title">Wanderly</h1>
+        <p className="home-subtitle">
+          Discover places, meet travelers, and plan your next adventure
+        </p>
+        <div className="home-actions">
+          <button
+            className="btn-primary"
+            onClick={() => navigate("/travelers")}
+          >
+            Meet Travelers
+          </button>
+          <button
+            className="home-btn-secondary"
+            onClick={() => navigate("/places")}
+          >
+            Explore Places
+          </button>
+        </div>
       </div>
     </div>
   );

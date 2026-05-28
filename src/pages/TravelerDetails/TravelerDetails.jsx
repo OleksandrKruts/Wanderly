@@ -34,39 +34,37 @@ const TravelerDetails = () => {
   if (error) return <p className="state error">Error: {error}</p>;
   if (!traveler) return null;
 
+  const fullName = `${traveler.firstName} ${traveler.lastName}`;
+
+  const initials = traveler.firstName[0] + traveler.lastName[0];
+
   const info = [
     { label: "Phone", value: traveler.phone },
-    { label: "Website", value: traveler.website },
-    { label: "Company", value: traveler.company.name },
-    { label: "City", value: traveler.address.city },
+    { label: "Company", value: traveler.company?.name },
+    { label: "City", value: traveler.address?.city },
+    { label: "Email", value: traveler.email },
   ];
 
   return (
     <div className="profile-page">
       <div className="profile-card">
-        <div className="avatar-large">
-          {traveler.name
-            .split(" ")
-            .map((n) => n[0])
-            .join("")}
-        </div>
+        <div className="avatar-large">{initials}</div>
 
-        <h1>{traveler.name}</h1>
+        <h1>{fullName}</h1>
         <p className="email">{traveler.email}</p>
 
         <div className="info-grid">
           {info.map((item) => (
             <div key={item.label}>
               <span>{item.label}</span>
-              <p>{item.value}</p>
+              <p>{item.value || "—"}</p>
             </div>
           ))}
         </div>
-        <div className="Reward-btn">
-          <button className="btn" onClick={() => navigate(`/travelers`)}>
-            Back to Travelers
-          </button>
-        </div>
+
+        <button className="rev-btn" onClick={() => navigate("/travelers")}>
+          Back to Travelers
+        </button>
       </div>
     </div>
   );

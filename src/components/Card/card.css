@@ -7,6 +7,7 @@
   flex-direction: column;
   gap: 12px;
   transition: all 0.2s ease;
+  min-width: 0;
 }
 
 .card:hover {
@@ -27,35 +28,25 @@
   font-size: 14px;
 }
 
-.info {
+.card-info {
   display: flex;
   flex-direction: column;
   gap: 4px;
+  min-width: 0;
 }
 
-.name {
+.card-info h3 {
   font-size: 16px;
   font-weight: 600;
   margin: 0;
 }
 
-.email {
+.card-info p {
   font-size: 14px;
   color: #666;
   margin: 0;
-}
 
-.btn {
-  margin-top: 8px;
-  padding: 8px 12px;
-  border: none;
-  border-radius: 8px;
-  background: #4f46e5;
-  color: white;
-  cursor: pointer;
-  transition: 0.2s;
-}
-
-.btn:hover {
-  background: #4338ca;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }

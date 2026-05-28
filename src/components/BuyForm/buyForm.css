@@ -1,0 +1,124 @@
+.buy-overlay,
+.buy-success-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.buy-card {
+  width: 360px;
+  background: #fff;
+  padding: 28px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.buy-card h2 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+  color: #111;
+}
+
+.buy-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.buy-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.buy-form-group label {
+  font-size: 13px;
+  color: #555;
+}
+
+.buy-form-group input {
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.buy-form-group input:focus {
+  border-color: #4f46e5;
+}
+
+.buy-error {
+  font-size: 12px;
+  color: #e11d48;
+  margin: 0;
+}
+
+.buy-btn {
+  padding: 11px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  background: #4f46e5;
+  color: white;
+  transition: background 0.2s;
+}
+
+.buy-btn:hover {
+  background: #4338ca;
+}
+
+.buy-btn.secondary {
+  background: #f0f0f0;
+  color: #333;
+}
+
+.buy-btn.secondary:hover {
+  background: #e0e0e0;
+}
+
+.buy-full-width {
+  width: 100%;
+}
+
+.buy-success-card {
+  width: 320px;
+  background: #fff;
+  padding: 32px;
+  border-radius: 16px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.buy-success-card h2 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.buy-success-card p {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+}
+
+.buy-success-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 8px;
+}

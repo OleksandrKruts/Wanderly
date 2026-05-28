@@ -16,7 +16,7 @@ const Header = () => {
   return (
     <header>
       <div className="header-container">
-        <div className="logo">Travel Explorer</div>
+        <div className="logo">Wanderly</div>
 
         <nav className="nav">
           <NavLink to="/" end>
@@ -25,7 +25,7 @@ const Header = () => {
 
           <NavLink to="/travelers">Travelers</NavLink>
 
-          <NavLink to="/hotels">Hotels</NavLink>
+          <NavLink to="/places">Places</NavLink>
         </nav>
 
         <div className="auth">

@@ -1,21 +1,19 @@
 import "./card.css";
 
-const Card = ({ name, email, onClick }) => {
-  const initials = (name || "")
-    .split(" ")
-    .map((n) => n[0])
-    .join("");
+const Card = ({ user, onClick }) => {
+  const fullName = `${user.firstName} ${user.lastName}`;
+  const initials = user.firstName[0] + user.lastName[0];
 
   return (
     <div className="card">
       <div className="avatar">{initials}</div>
 
-      <div className="info">
-        <h3 className="name">{name || "Unknown user"}</h3>
-        <p className="email">{email || "No email"}</p>
+      <div className="card-info">
+        <h3>{fullName}</h3>
+        <p>{user.email}</p>
       </div>
 
-      <button className="btn" onClick={onClick}>
+      <button className="btn-primary" onClick={onClick}>
         View profile
       </button>
     </div>

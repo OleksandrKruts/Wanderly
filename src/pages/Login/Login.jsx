@@ -53,21 +53,23 @@ const Login = () => {
         <h2 className="login-title">Sign In</h2>
 
         <form onSubmit={handleSubmit(onSubmit)} noValidate>
-          <div className="form-group">
+          <div className="login-form-group">
             <label>Email</label>
             <input type="email" {...register("email")} />
-            {errors.email && <p className="error">{errors.email.message}</p>}
-          </div>
-
-          <div className="form-group">
-            <label>Password</label>
-            <input type="password" {...register("password")} />
-            {errors.password && (
-              <p className="error">{errors.password.message}</p>
+            {errors.email && (
+              <p className="login-error">{errors.email.message}</p>
             )}
           </div>
 
-          <button type="submit" className="btn full-width">
+          <div className="login-form-group">
+            <label>Password</label>
+            <input type="password" {...register("password")} />
+            {errors.password && (
+              <p className="login-error">{errors.password.message}</p>
+            )}
+          </div>
+
+          <button type="submit" className="login-btn login-full-width">
             Sign In
           </button>
         </form>

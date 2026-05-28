@@ -63,6 +63,17 @@
   font-weight: 500;
 }
 
-.Reward-btn {
+.rev-btn {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 8px;
+  background: #4f46e5;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s;
   margin-top: 20px;
+}
+
+.rev-btn:hover {
+  background: #4338ca;
 }

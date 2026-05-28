@@ -8,7 +8,7 @@ import Loader from "../../components/Loader/Loader";
 
 const Travelers = () => {
   const [travelers, setTravelers] = useState([]);
-  const [visibleCount, setVisibleCount] = useState(5);
+  const [visibleCount, setVisibleCount] = useState(9);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -32,30 +32,41 @@ const Travelers = () => {
   }, []);
 
   const showMore = () => {
-    setVisibleCount((prev) => prev + 10);
+    setVisibleCount((prev) => prev + 6);
   };
 
-  if (loading) return <Loader />;
-  if (error) return <p className="state error">Error: {error}</p>;
+  if (loading) {
+    return (
+      <div className="state-wrapper">
+        <Loader />
+      </div>
+    );
+  }
+
+  if (error) {
+    return <p className="state error">Error: {error}</p>;
+  }
 
   return (
-    <div className="page">
-      <h1 className="title">Travelers</h1>
+    <div className="travelers-page">
+      <h1 className="travelers-title">Travelers</h1>
 
-      <div className="grid">
+      <div className="travelers-grid">
         {travelers.slice(0, visibleCount).map((user) => (
           <Card
             key={user.id}
-            name={user.name}
-            email={user.email}
+            user={user}
             onClick={() => navigate(`/travelers/${user.id}`)}
           />
         ))}
       </div>
+
       {visibleCount < travelers.length && (
-        <button className="btn show-btn" onClick={showMore}>
-          Show More
-        </button>
+        <div className="show-more-wrapper">
+          <button className="show-btn" onClick={showMore}>
+            Show More
+          </button>
+        </div>
       )}
     </div>
   );

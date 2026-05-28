@@ -1,13 +1,15 @@
-const BASE_URL = "https://jsonplaceholder.typicode.com/users";
+const BASE_URL = "https://dummyjson.com/users";
 
 export const getTravelers = async () => {
-  const res = await fetch(BASE_URL);
+  const res = await fetch(`${BASE_URL}?limit=100`);
 
   if (!res.ok) {
     throw new Error("Failed to load travelers");
   }
 
-  return res.json();
+  const data = await res.json();
+
+  return data.users;
 };
 
 export const getTravelerById = async (id) => {
